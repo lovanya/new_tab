@@ -1,0 +1,31 @@
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin cover() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  zoom: 1;
+  overflow: hidden;
+}
+
+html,body,#app{
+  @include cover();
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tab-page {
+  @include cover();
+}
+
